@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(Logged in as ${client.user.tag}!);
 });
 
 client.on('message', msg => {
@@ -12,13 +12,12 @@ client.on('message', msg => {
 });
 
 
-}
-});
+client.on('message', message => {
    let embed = new Discord.RichEmbed()
 
     let args = message.content.split(' ').slice(1).join(' ');
      if(!message.channel.guild) return;
-if(message.content.split(' ')[0] == '*bc') {
+if(message.content.split('!')[0] == '*bc') {
          message.react("✔️")
           let embed = new Discord.RichEmbed()
     .setColor("#FF00FF")
@@ -35,5 +34,4 @@ if(message.content.split(' ')[0] == '*bc') {
         });
     }
 })
-
 client.login(process.env.BOT_TOKEN);
