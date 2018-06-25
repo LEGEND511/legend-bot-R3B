@@ -260,6 +260,7 @@ client.on('message', function(message) {
     }
 });
 
+
     
 client.on('message', message => {
    let embed = new Discord.RichEmbed()
